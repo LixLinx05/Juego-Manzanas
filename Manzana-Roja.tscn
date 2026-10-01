@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj2y2thf02wxv"]
+
+[ext_resource type="Texture2D" uid="uid://bfky1rch17l8w" path="res://Mnzana Roja.png" id="1_3ao17"]
+[ext_resource type="Script" uid="uid://cdrw7rlxo5p03" path="res://manzana_roja.gd" id="1_oqt78"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oqt78"]
+radius = 17.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v3r57"]
+radius = 17.029387
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["ManRo", "Manzana"]]
+script = ExtResource("1_oqt78")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_3ao17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oqt78")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Manzana"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_v3r57")

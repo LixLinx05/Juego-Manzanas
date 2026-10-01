@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx2dngktetmxc"]
+
+[ext_resource type="Script" uid="uid://ru6j2mfdiadb" path="res://win.gd" id="1_hgi8f"]
+[ext_resource type="FontFile" uid="uid://duuaabshuidk3" path="res://PixelifySans-VariableFont_wght.ttf" id="2_tmki8"]
+
+[node name="Win" type="CanvasLayer"]
+script = ExtResource("1_hgi8f")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 341.00003
+offset_top = 178.0
+offset_right = 413.00003
+offset_bottom = 201.0
+scale = Vector2(5.8150206, 3.9087834)
+theme_override_fonts/font = ExtResource("2_tmki8")
+text = "¡GANASTE!"
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 421.00003
+offset_top = 298.0
+offset_right = 475.00003
+offset_bottom = 329.0
+scale = Vector2(4.176657, 3.4152596)
+theme_override_fonts/font = ExtResource("2_tmki8")
+text = "RESET"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

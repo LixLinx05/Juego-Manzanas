@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhn1f0lxdjitl"]
+
+[ext_resource type="Script" uid="uid://bfb7nitykv7i7" path="res://spawner.gd" id="1_mimr8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uw7ra"]
+
+[node name="Spawner" type="Area2D"]
+scale = Vector2(1, 0.87999994)
+script = ExtResource("1_mimr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.0013896, -1.4351357)
+shape = SubResource("RectangleShape2D_uw7ra")
+
+[node name="CoolDown" type="Timer" parent="."]
+wait_time = 0.8
+
+[connection signal="timeout" from="CoolDown" to="." method="_on_cool_down_timeout"]

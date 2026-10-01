@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://yudlwvo1sg53"]
+
+[ext_resource type="FontFile" uid="uid://duuaabshuidk3" path="res://PixelifySans-VariableFont_wght.ttf" id="2_yh1op"]
+
+[node name="Control" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 341.00003
+offset_top = 200.0
+offset_right = 433.00003
+offset_bottom = 222.99998
+scale = Vector2(4.319424, 7.953331)
+theme_override_fonts/font = ExtResource("2_yh1op")
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 392.00003
+offset_top = 376.0
+offset_right = 447.00003
+offset_bottom = 407.0
+scale = Vector2(4.176657, 3.4152596)
+theme_override_fonts/font = ExtResource("2_yh1op")
+text = "RESET"

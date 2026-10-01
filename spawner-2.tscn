@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkn8007421kpx"]
+
+[ext_resource type="Script" uid="uid://c58f6ib7dnuq" path="res://spawner-2.gd" id="1_dt181"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nq3go"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_dt181")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nq3go")
+
+[node name="CoolDown" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="CoolDown" to="." method="_on_cool_down_timeout"]

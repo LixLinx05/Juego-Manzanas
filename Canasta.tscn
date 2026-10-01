@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://duaye610q4854"]
+
+[ext_resource type="Texture2D" uid="uid://b6qm5robyeswo" path="res://Canasta Manzana-1.png" id="1_s607h"]
+[ext_resource type="Script" uid="uid://c5m7bnscoo65g" path="res://canasta.gd" id="1_wvqdw"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wvqdw"]
+a = Vector2(106, -5)
+b = Vector2(-20, -5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_s607h"]
+a = Vector2(73, 12)
+b = Vector2(-9, 12)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_wvqdw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(134, 180)
+texture = ExtResource("1_s607h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(91, 164)
+shape = SubResource("SegmentShape2D_wvqdw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(102, 199)
+shape = SubResource("SegmentShape2D_s607h")
